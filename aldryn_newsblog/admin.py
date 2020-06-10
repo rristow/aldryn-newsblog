@@ -99,7 +99,8 @@ class ArticleAdminForm(TranslatableModelForm):
 
 
 class ArticleAdmin(
-    AllTranslationsMixin,
+#TODO: The mark_safe in language_column is not working and the html code is showed in admin/list Articles
+#    AllTranslationsMixin,
     PlaceholderAdminMixin,
     FrontendEditableAdminMixin,
     ModelAppHookConfig,
@@ -175,7 +176,7 @@ admin.site.register(models.Article, ArticleAdmin)
 
 
 class NewsBlogConfigAdmin(
-    AllTranslationsMixin,
+#    AllTranslationsMixin,
     PlaceholderAdminMixin,
     BaseAppHookConfig,
     TranslatableAdmin
